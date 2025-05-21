@@ -6,6 +6,7 @@ import add_book
 import read_book
 import update_book
 import delete_book
+import os
 from categori_book import CategoryApp
 from transaction_main import TransactionForm
 from detail_transaction import DetailTransactionForm
@@ -62,8 +63,8 @@ class DashboardApp(AppWindow):
         super().__init__(root, "Sistem Manajemen Perpustakaan - Admin")
         self.id_staff = id_staff
         self.username = username
-        self.bg_path = "C:/Users/Swykhe Galeh Wahyu P/OneDrive/ドキュメント/TUGAS AKHIR/dtei gedung.jpg"
-        self.logo_path = "C:/Users/Swykhe Galeh Wahyu P/OneDrive/ドキュメント/TUGAS AKHIR/dtei.png"  # ganti dengan path logo kamu
+        self.bg_path = os.path.join("assets", "dtei_gedung.jpg")
+        self.logo_path = os.path.join("assets", "dtei.png")
         self.sidebar_width = 200
         self.setup_dashboard()
 
